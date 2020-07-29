@@ -389,15 +389,13 @@ func (p *powerline) draw() string {
 		var foreground, background uint8
 		if *p.args.PrevError == 0 || *p.args.StaticPromptIndicator {
 			foreground = p.theme.CmdPassedFg
-			background = p.theme.CmdPassedBg
 		} else {
-			foreground = p.theme.CmdFailedFg
-			background = p.theme.CmdFailedBg
+			foreground = p.theme.CmdFailedBg
 		}
 
 		buffer.WriteString(p.fgColor(foreground))
 		buffer.WriteString(p.bgColor(background))
-		buffer.WriteString(p.shellInfo.rootIndicator)
+		buffer.WriteString("")
 		buffer.WriteString(p.reset)
 		buffer.WriteString(p.fgColor(background))
 		buffer.WriteString(p.symbolTemplates.Separator)

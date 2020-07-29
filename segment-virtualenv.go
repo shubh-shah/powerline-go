@@ -23,7 +23,7 @@ func segmentVirtualEnv(p *powerline) []pwl.Segment {
 	}
 	segments := []pwl.Segment{}
 	if env != "" {
-		envName := path.Base(env)
+		envName := " "+path.Base(env)
 		segments = append(segments, pwl.Segment{
 			Name:       "venv",
 			Content:    envName,
