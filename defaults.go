@@ -28,7 +28,7 @@ var symbolTemplates = map[string]Symbols{
 		SeparatorReverse:     "\uE0B2",
 		SeparatorReverseThin: "\uE0B3",
 
-		RepoBranch:     "\uE0A0",
+		RepoBranch:     "",
 		RepoDetached:   "\u2693",
 		RepoAhead:      "\u2B06",
 		RepoBehind:     "\u2B07",
@@ -72,7 +72,7 @@ var shellInfos = map[string]ShellInfo{
 		evalPromptRightSuffix: `"`,
 	},
 	"bare": {
-		colorTemplate:    "%s",
+		colorTemplate: "%s",
 		rootIndicator:    "$",
 		escapedBackslash: `\`,
 		escapedBacktick:  "`",
@@ -1494,9 +1494,9 @@ var themes = map[string]Theme{
 		ReadonlyBg:         gruvbox_bright_red,
 		SSHFg:              gruvbox_light0,
 		SSHBg:              gruvbox_faded_purple,
-		DockerMachineFg:    gruvbox_light0, // match ssh-fg
+		DockerMachineFg:    gruvbox_light0,       // match ssh-fg
 		DockerMachineBg:    gruvbox_faded_purple, // match ssh-bg
-		DotEnvFg:           gruvbox_light0, // match ssh-fg
+		DotEnvFg:           gruvbox_light0,       // match ssh-fg
 		DotEnvBg:           gruvbox_faded_purple, // match ssh-bg
 		RepoCleanFg:        gruvbox_dark1,
 		RepoCleanBg:        gruvbox_faded_green,
@@ -1526,16 +1526,16 @@ var themes = map[string]Theme{
 		GitStashedBg:       gruvbox_neutral_yellow,
 		VirtualEnvFg:       gruvbox_light0,
 		VirtualEnvBg:       gruvbox_faded_green,
-		PerlbrewFg:         gruvbox_light0,  // match virtualenv
+		PerlbrewFg:         gruvbox_light0,      // match virtualenv
 		PerlbrewBg:         gruvbox_faded_green, // match virtualenv
-		PlEnvFg:            gruvbox_light0,  // match virtualenv
+		PlEnvFg:            gruvbox_light0,      // match virtualenv
 		PlEnvBg:            gruvbox_faded_green, // match virtualenv
 		TimeFg:             gruvbox_light2,
 		TimeBg:             gruvbox_dark4,
-		ShellVarFg:         gruvbox_light0,  // match ssh-fg
-		ShellVarBg:         gruvbox_faded_purple,  // match ssh-bg
-		NodeFg:             gruvbox_light0,      // match virtualenv
-		NodeBg:             gruvbox_faded_green, // match virtualenv
+		ShellVarFg:         gruvbox_light0,       // match ssh-fg
+		ShellVarBg:         gruvbox_faded_purple, // match ssh-bg
+		NodeFg:             gruvbox_light0,       // match virtualenv
+		NodeBg:             gruvbox_faded_green,  // match virtualenv
 		LoadFg:             gruvbox_light0,
 		LoadBg:             gruvbox_faded_purple,
 		LoadHighBg:         gruvbox_neutral_red,

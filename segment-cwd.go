@@ -69,7 +69,7 @@ Aliases:
 
 			// But if the upper index is out of bounds we can short-circuit
 			// and move on to the next alias.
-			if max > (len(pathSegments)-i)-1 {
+			if max > len(pathSegments) {
 				continue Aliases
 			}
 
