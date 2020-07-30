@@ -259,9 +259,9 @@ Usage of powerline-go:
     	 Minimum width of a segment, segments longer than this will be shortened if space is limited. Setting this to 0 disables it.
     	 (default 16)
   --separator string
-			The separator to be used,
-			(valid choices: angled,left-slant,right-slant,circle,flat,faded)
-      (default "angled")
+			 The separator to be used,
+			 (valid choices: angled,left-slant,right-slant,circle,flat,faded)
+       (default "angled")
 ```
 
 ### Path Aliases
