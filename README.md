@@ -55,13 +55,13 @@ but you may have to set your $TERM to `xterm-256color` for it to work.
 
 If you want to use the "patched" mode (which is the default, and provides
 improved UI), you'll need to install a nerd font version, either as fallback,
-or by patching the font you use for your terminal: see
-[nerd-fonts](https://github.com/ryanoasis/nerd-fonts). 
-[nerd-fonts download page](https://www.nerdfonts.com/font-downloads). 
+or by patching the font you use for your terminal:    
+[nerd-fonts](https://github.com/ryanoasis/nerd-fonts)     
+[nerd-fonts download page](https://www.nerdfonts.com/font-downloads)    
 
-Following will work in "flat"
-[powerline-fonts](https://github.com/Lokaltog/powerline-fonts).  
-[cascadia-code](https://github.com/microsoft/cascadia-code). 
+Following will work in "flat" mode:    
+[powerline-fonts](https://github.com/Lokaltog/powerline-fonts)    
+[cascadia-code](https://github.com/microsoft/cascadia-code)    
 
 Alternatively you can use "compatible" which works for most fonts
 
