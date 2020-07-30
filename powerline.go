@@ -9,8 +9,8 @@ import (
 	"strings"
 	"sync"
 
-	pwl "github.com/justjanne/powerline-go/powerline"
 	"github.com/mattn/go-runewidth"
+	pwl "github.com/shubh-shah/powerline-go/powerline"
 	"golang.org/x/crypto/ssh/terminal"
 	"golang.org/x/text/width"
 )

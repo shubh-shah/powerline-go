@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	pwl "github.com/justjanne/powerline-go/powerline"
+	pwl "github.com/shubh-shah/powerline-go/powerline"
 )
 
 func segmentUser(p *powerline) []pwl.Segment {

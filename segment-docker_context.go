@@ -2,10 +2,11 @@ package main
 
 import (
 	"encoding/json"
-	pwl "github.com/justjanne/powerline-go/powerline"
 	"io/ioutil"
 	"os"
 	"path/filepath"
+
+	pwl "github.com/shubh-shah/powerline-go/powerline"
 )
 
 type DockerContextConfig struct {

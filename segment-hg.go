@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	pwl "github.com/justjanne/powerline-go/powerline"
 	"os/exec"
 	"strings"
+
+	pwl "github.com/shubh-shah/powerline-go/powerline"
 )
 
 func getHgStatus() (bool, bool, bool) {

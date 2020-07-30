@@ -1,9 +1,10 @@
 package main
 
 import (
-	pwl "github.com/justjanne/powerline-go/powerline"
 	"io/ioutil"
 	"os"
+
+	pwl "github.com/shubh-shah/powerline-go/powerline"
 )
 
 const wsFile = "./.terraform/environment"

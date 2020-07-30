@@ -1,10 +1,11 @@
 package main
 
 import (
-	pwl "github.com/justjanne/powerline-go/powerline"
 	"log"
 	"os/exec"
 	"strings"
+
+	pwl "github.com/shubh-shah/powerline-go/powerline"
 )
 
 func segmentGCP(p *powerline) []pwl.Segment {

@@ -1,9 +1,10 @@
 package main
 
 import (
-	pwl "github.com/justjanne/powerline-go/powerline"
 	"os"
 	"path"
+
+	pwl "github.com/shubh-shah/powerline-go/powerline"
 )
 
 func segmentPlEnv(p *powerline) []pwl.Segment {

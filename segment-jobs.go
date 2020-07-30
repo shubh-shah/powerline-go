@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-	pwl "github.com/justjanne/powerline-go/powerline"
 	"os"
 	"os/exec"
 	"strconv"
 	"strings"
+
+	pwl "github.com/shubh-shah/powerline-go/powerline"
 )
 
 func segmentJobs(p *powerline) []pwl.Segment {

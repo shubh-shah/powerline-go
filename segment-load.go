@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	pwl "github.com/justjanne/powerline-go/powerline"
 	"runtime"
+
+	pwl "github.com/shubh-shah/powerline-go/powerline"
 
 	"github.com/shirou/gopsutil/load"
 )

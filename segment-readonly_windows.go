@@ -3,8 +3,9 @@
 package main
 
 import (
-	pwl "github.com/justjanne/powerline-go/powerline"
 	"os"
+
+	pwl "github.com/shubh-shah/powerline-go/powerline"
 )
 
 func segmentPerms(p *powerline) []pwl.Segment {

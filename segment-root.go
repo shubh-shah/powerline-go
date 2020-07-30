@@ -1,6 +1,6 @@
 package main
 
-import pwl "github.com/justjanne/powerline-go/powerline"
+import pwl "github.com/shubh-shah/powerline-go/powerline"
 
 func segmentRoot(p *powerline) []pwl.Segment {
 	var foreground, background uint8

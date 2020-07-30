@@ -3,9 +3,10 @@ package main
 import (
 	"errors"
 	"fmt"
-	pwl "github.com/justjanne/powerline-go/powerline"
 	"os/exec"
 	"strings"
+
+	pwl "github.com/shubh-shah/powerline-go/powerline"
 )
 
 var otherModified int

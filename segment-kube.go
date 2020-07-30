@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	pwl "github.com/justjanne/powerline-go/powerline"
 	"io/ioutil"
 	"os"
 	"path"
@@ -10,6 +9,8 @@ import (
 	"regexp"
 	"runtime"
 	"strings"
+
+	pwl "github.com/shubh-shah/powerline-go/powerline"
 
 	"gopkg.in/yaml.v2"
 )
