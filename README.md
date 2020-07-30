@@ -2,7 +2,7 @@
 
 A [Powerline](https://github.com/Lokaltog/vim-powerline) like prompt for Bash,
 ZSH and Fish. Based on [Powerline-Shell](https://github.com/banga/powerline-shell) by @banga.
-Ported to golang by @justjanne. Enhanced by shubh-shah.
+Ported to golang by @justjanne. Enhanced by @shubh-shah.
 
 ![Solarized+Powerline](https://raw.github.com/shubh-shah/powerline-go/master/preview.png)
 
