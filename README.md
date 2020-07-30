@@ -54,15 +54,16 @@ Each of these will have a number next to it if more than one file matches.
 but you may have to set your $TERM to `xterm-256color` for it to work.
 
 If you want to use the "patched" mode (which is the default, and provides
-improved UI), you'll need to install a powerline font, either as fallback,
+improved UI), you'll need to install a nerd font version, either as fallback,
 or by patching the font you use for your terminal: see
+[nerd-fonts](https://github.com/ryanoasis/nerd-fonts). 
+[nerd-fonts download page](https://www.nerdfonts.com/font-downloads). 
+
+Following will work in "flat"
 [powerline-fonts](https://github.com/Lokaltog/powerline-fonts).  
-Alternatively you can use "compatible" or "flat" mode.
+[cascadia-code](https://github.com/microsoft/cascadia-code). 
 
-### Precompiled Binaries
-
-I provide precompiled binaries for x64 Linux and macOS in the
-[releases tab](https://github.com/justjanne/powerline-go/releases)
+Alternatively you can use "compatible" which works for most fonts
 
 ### Other Platforms
 
@@ -263,6 +264,28 @@ Usage of powerline-go:
       (default "angled")
 ```
 
+### Path Aliases
+
+The point of the path aliases feature is to allow you to replace long paths
+with a shorter string that you can understand more quickly. This is useful if
+you're often in deep path hierarchies that end up consuming most of your
+terminal width, even when some portions are replaced by an ellipsis.
+
+For example, you might want to replace the string `$GOPATH/src/github.com` with
+`@GOPATH-GH`. When you're in a directory like
+`$GOPATH/src/github.com/justjanne/powerline-go`, you'll instead see `@GOPATH-GH >
+justjanne > powerline-go` in the shell prompt.
+
+Aliases are defined as comma-separated key value pairs, like this:
+
+```bash
+powerline-go ... -path-aliases \$GOPATH/src/github.com=@GOPATH-GH,\~/work/projects/foo=@FOO,\~/work/projects/bar=@BAR
+```
+    
+Note that you should use `~` instead of `/home/username` when specifying the
+path. Also make sure to escape the `~` character. Otherwise your shell will
+perform interpolation on it before `powerline-go` can see it!
+
 ### Eval
 
 If using `eval` and `-modules-right` is desired, the shell setup must be modified slightly, as shown below:
@@ -307,28 +330,6 @@ fi
 ##### Fish
 
 Eval mode (and `modules-right` support) for Fish is not currently available.
-
-### Path Aliases
-
-The point of the path aliases feature is to allow you to replace long paths
-with a shorter string that you can understand more quickly. This is useful if
-you're often in deep path hierarchies that end up consuming most of your
-terminal width, even when some portions are replaced by an ellipsis.
-
-For example, you might want to replace the string `$GOPATH/src/github.com` with
-`@GOPATH-GH`. When you're in a directory like
-`$GOPATH/src/github.com/justjanne/powerline-go`, you'll instead see `@GOPATH-GH >
-justjanne > powerline-go` in the shell prompt.
-
-Aliases are defined as comma-separated key value pairs, like this:
-
-```bash
-powerline-go ... -path-aliases \$GOPATH/src/github.com=@GOPATH-GH,\~/work/projects/foo=@FOO,\~/work/projects/bar=@BAR
-```
-    
-Note that you should use `~` instead of `/home/username` when specifying the
-path. Also make sure to escape the `~` character. Otherwise your shell will
-perform interpolation on it before `powerline-go` can see it!
 
 ### Duration
 
