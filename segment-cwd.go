@@ -203,7 +203,7 @@ func segmentCwd(p *powerline) (segments []pwl.Segment) {
 
 		for idx, pathSegment := range pathSegments {
 			isLastDir := idx == len(pathSegments)-1 || (!pathSegment.alias && pathSegments[idx+1].alias)
-			isLastAlias := isLastDir || (pathSegment.alias && !pathSegments[idx+1].alias)
+			isLastAlias := isLastDir || (pathSegment.alias && !pathSegments[idx+1].alias) || (pathSegment.home && !pathSegments[idx+1].alias)
 			foreground, background, special := getColor(p, pathSegment, isLastDir)
 
 			segment := pwl.Segment{
