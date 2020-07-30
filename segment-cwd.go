@@ -202,7 +202,8 @@ func segmentCwd(p *powerline) (segments []pwl.Segment) {
 		}
 
 		for idx, pathSegment := range pathSegments {
-			isLastDir := idx == len(pathSegments)-1
+			isLastDir := idx == len(pathSegments)-1 || (!pathSegment.alias && pathSegments[idx+1].alias)
+			isLastAlias := isLastDir || (pathSegment.alias && !pathSegments[idx+1].alias)
 			foreground, background, special := getColor(p, pathSegment, isLastDir)
 
 			segment := pwl.Segment{
@@ -218,6 +219,14 @@ func segmentCwd(p *powerline) (segments []pwl.Segment) {
 				} else if (p.align == alignLeft || !p.supportsRightModules()) && !isLastDir {
 					segment.Separator = p.symbolTemplates.SeparatorThin
 					segment.SeparatorForeground = p.theme.SeparatorFg
+				}
+			} else {
+				if p.align == alignRight && p.supportsRightModules() && idx != 0 {
+					segment.Separator = p.symbolTemplates.SeparatorReverseThin
+					segment.SeparatorForeground = p.theme.PathBg
+				} else if (p.align == alignLeft || !p.supportsRightModules()) && !isLastAlias {
+					segment.Separator = p.symbolTemplates.SeparatorThin
+					segment.SeparatorForeground = p.theme.PathBg
 				}
 			}
 
