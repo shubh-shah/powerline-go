@@ -1,8 +1,9 @@
 package main
 
 import (
-	pwl "github.com/justjanne/powerline-go/powerline"
 	"os"
+
+	pwl "github.com/justjanne/powerline-go/powerline"
 )
 
 func segmentUser(p *powerline) []pwl.Segment {
@@ -24,7 +25,7 @@ func segmentUser(p *powerline) []pwl.Segment {
 
 	return []pwl.Segment{{
 		Name:       "user",
-		Content:    userPrompt,
+		Content:    "\uf31c " + userPrompt,
 		Foreground: p.theme.UsernameFg,
 		Background: background,
 	}}

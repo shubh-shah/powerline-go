@@ -87,7 +87,7 @@ var themes = map[string]Theme{
 		DefaultFg: 250,
 		DefaultBg: 240,
 
-		UsernameFg:     250,
+		UsernameFg:     253,
 		UsernameBg:     240,
 		UsernameRootBg: 124,
 
@@ -95,10 +95,10 @@ var themes = map[string]Theme{
 		HostnameBg: 238,
 
 		HomeSpecialDisplay: true,
-		HomeFg:             15,  // white
-		HomeBg:             31,  // blueish
-		AliasFg:            15,  // white
-		AliasBg:            31,  // blueish
+		HomeFg:             0,   // black
+		HomeBg:             32,  // blueish
+		AliasFg:            0,   // black
+		AliasBg:            32,  // blueish
 		PathFg:             250, // light grey
 		PathBg:             237, // dark grey
 		CwdFg:              254, // nearly-white grey
@@ -127,15 +127,15 @@ var themes = map[string]Theme{
 		RepoCleanFg: 0,   // black
 		RepoCleanBg: 148, // a light green color
 		RepoDirtyFg: 15,  // white
-		RepoDirtyBg: 161, // pink/red
+		RepoDirtyBg: 166, // pink/red
 
 		JobsFg: 39,
 		JobsBg: 238,
 
-		CmdPassedFg: 15,
+		CmdPassedFg: 69,
 		CmdPassedBg: 236,
 		CmdFailedFg: 15,
-		CmdFailedBg: 161,
+		CmdFailedBg: 160,
 
 		SvnChangesFg: 22, // dark green
 		SvnChangesBg: 148,
@@ -148,21 +148,21 @@ var themes = map[string]Theme{
 		GitBehindFg:     250,
 		GitBehindBg:     240,
 		GitStagedFg:     15,
-		GitStagedBg:     22,
-		GitNotStagedFg:  15,
-		GitNotStagedBg:  130,
+		GitStagedBg:     64,
+		GitNotStagedFg:  0,
+		GitNotStagedBg:  214,
 		GitUntrackedFg:  15,
-		GitUntrackedBg:  52,
+		GitUntrackedBg:  88,
 		GitConflictedFg: 15,
 		GitConflictedBg: 9,
 		GitStashedFg:    15,
 		GitStashedBg:    20,
 
 		VirtualEnvFg: 00,
-		VirtualEnvBg: 35, // a mid-tone green
+		VirtualEnvBg: 40, // a mid-tone green
 
 		VirtualGoFg: 00,
-		VirtualGoBg: 35,
+		VirtualGoBg: 40,
 
 		PerlbrewFg: 00,
 		PerlbrewBg: 20, // a mid-tone blue
@@ -182,7 +182,7 @@ var themes = map[string]Theme{
 		ShEnvFg: 15,
 		ShEnvBg: 130,
 
-		NodeFg: 15,
+		NodeFg: 00,
 		NodeBg: 40,
 
 		LoadFg:           15,

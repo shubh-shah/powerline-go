@@ -153,11 +153,11 @@ func main() {
 			commentsWithDefaults("Maximum number of letters displayed for each directory in the path")),
 		ColorizeHostname: flag.Bool(
 			"colorize-hostname",
-			false,
+			true,
 			comments("Colorize the hostname based on a hash of itself, or use the PLGO_HOSTNAMEFG and/or PLGO_HOSTNAMEBG env vars.")),
 		HostnameOnlyIfSSH: flag.Bool(
 			"hostname-only-if-ssh",
-			false,
+			true,
 			comments("Show hostname only for SSH connections")),
 		SshAlternateIcon: flag.Bool(
 			"alternate-ssh-icon",
@@ -169,7 +169,7 @@ func main() {
 			comments("Use East Asian Ambiguous Widths")),
 		PromptOnNewLine: flag.Bool(
 			"newline",
-			false,
+			true,
 			comments("Show the prompt on a new line")),
 		StaticPromptIndicator: flag.Bool(
 			"static-prompt-indicator",

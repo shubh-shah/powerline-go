@@ -24,7 +24,7 @@ func segmentNode(p *powerline) []pwl.Segment {
 			if err == nil {
 				return []pwl.Segment{{
 					Name:       "node-segment",
-					Content:    pkg.Version + " \u2B22",
+					Content:    " " + pkg.Version,
 					Foreground: p.theme.NodeFg,
 					Background: p.theme.NodeBg,
 				}}
