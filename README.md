@@ -17,7 +17,6 @@ Ported to golang by @justjanne.
 
 - [Version Control](#version-control)
 - [Installation](#installation)
-  - [Precompiled Binaries](#precompiled-binaries)
   - [Other Platforms](#other-platforms)
   - [Bash](#bash)
   - [ZSH](#zsh)
@@ -70,7 +69,7 @@ Alternatively you can use "compatible" which works for most fonts
 - Install (and update) the package with
 
 ```bash
-go get -u github.com/justjanne/powerline-go
+go get -u github.com/shubh-shah/powerline-go
 ```
 
 - By default it will be in `$GOPATH/bin`, if you want to change that, you can set
