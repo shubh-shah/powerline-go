@@ -59,6 +59,7 @@ type args struct {
 	DurationMin            *string
 	Eval                   *bool
 	Condensed              *bool
+	SeparatorDsgn          *string
 }
 
 func warn(msg string) {
@@ -265,6 +266,11 @@ func main() {
 			"condensed",
 			false,
 			comments("Remove spacing between segments")),
+		SeparatorDsgn: flag.String(
+			"separator",
+			"angled",
+			commentsWithDefaults("The separator to be used",
+				"(valid choices: angled,left-slant,right-slant,circle,flat,faded)")),
 	}
 	flag.Parse()
 	if strings.HasSuffix(*args.Theme, ".json") {

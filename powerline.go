@@ -111,6 +111,7 @@ func newPowerline(args args, cwd string, priorities map[string]int, align alignm
 }
 
 func initSegments(p *powerline, mods []string) {
+	p.setSeparator(*p.args.SeparatorDsgn)
 	orderedSegments := map[int][]pwl.Segment{}
 	c := make(chan prioritizedSegments, len(mods))
 	wg := sync.WaitGroup{}
@@ -147,6 +148,39 @@ func initSegments(p *powerline, mods []string) {
 			p.appendSegment(seg.Name, seg)
 		}
 	}
+}
+
+func (p *powerline) setSeparator(Separator string) {
+	if Separator == "angled" {
+		return
+	} else if Separator == "left-slant" {
+		p.symbolTemplates.Separator = "\ue0bc"
+		p.symbolTemplates.SeparatorThin = "\ue0bb"
+		p.symbolTemplates.SeparatorReverse = "\ue0b8"
+		p.symbolTemplates.SeparatorReverseThin = "\ue0b9"
+	} else if Separator == "right-slant" {
+		p.symbolTemplates.Separator = "\ue0b8"
+		p.symbolTemplates.SeparatorThin = "\ue0b9"
+		p.symbolTemplates.SeparatorReverse = "\ue0bc"
+		p.symbolTemplates.SeparatorReverseThin = "\ue0bb"
+	} else if Separator == "circle" {
+		p.symbolTemplates.Separator = "\uE0B4"
+		p.symbolTemplates.SeparatorThin = "\uE0B5"
+		p.symbolTemplates.SeparatorReverse = "\uE0B6"
+		p.symbolTemplates.SeparatorReverseThin = "\uE0B7"
+
+	} else if Separator == "flat" {
+		p.symbolTemplates.Separator = ""
+		p.symbolTemplates.SeparatorThin = "\u2502"
+		p.symbolTemplates.SeparatorReverse = ""
+		p.symbolTemplates.SeparatorReverseThin = "\u2502"
+	} else if Separator == "faded" {
+		p.symbolTemplates.Separator = "▓▒░"
+		p.symbolTemplates.SeparatorThin = "\u2502"
+		p.symbolTemplates.SeparatorReverse = "░▒▓"
+		p.symbolTemplates.SeparatorReverseThin = "\u2502"
+	}
+	return
 }
 
 func (p *powerline) color(prefix string, code uint8) string {
@@ -394,11 +428,9 @@ func (p *powerline) draw() string {
 		}
 
 		buffer.WriteString(p.fgColor(foreground))
-		buffer.WriteString(p.bgColor(background))
-		buffer.WriteString("")
+		buffer.WriteString("") //❯$
 		buffer.WriteString(p.reset)
 		buffer.WriteString(p.fgColor(background))
-		buffer.WriteString(p.symbolTemplates.Separator)
 		buffer.WriteString(p.reset)
 		buffer.WriteRune(' ')
 	}
