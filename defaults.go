@@ -14,8 +14,8 @@ var symbolTemplates = map[string]Symbols{
 		RepoAhead:      "\u2B06",
 		RepoBehind:     "\u2B07",
 		RepoStaged:     "\u2714",
-		RepoNotStaged:  "",
-		RepoUntracked:  "",
+		RepoNotStaged:  "\u270E",
+		RepoUntracked:  "+",
 		RepoConflicted: "\u273C",
 		RepoStashed:    "\u2691",
 	},
@@ -28,10 +28,10 @@ var symbolTemplates = map[string]Symbols{
 		SeparatorReverse:     "\uE0B2",
 		SeparatorReverseThin: "\uE0B3",
 
-		RepoBranch:     "",
+		RepoBranch:     "",
 		RepoDetached:   "\u2693",
-		RepoAhead:      "\u2B06",
-		RepoBehind:     "\u2B07",
+		RepoAhead:      "", //f55d
+		RepoBehind:     "", //f545
 		RepoStaged:     "\u2714",
 		RepoNotStaged:  "",
 		RepoUntracked:  "",
@@ -143,9 +143,9 @@ var themes = map[string]Theme{
 		GCPFg: 117,
 		GCPBg: 26,
 
-		GitAheadFg:      250,
+		GitAheadFg:      42,
 		GitAheadBg:      240,
-		GitBehindFg:     250,
+		GitBehindFg:     168,
 		GitBehindBg:     240,
 		GitStagedFg:     15,
 		GitStagedBg:     64,
