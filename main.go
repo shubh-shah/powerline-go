@@ -115,6 +115,7 @@ var modules = map[string]func(*powerline) []pwl.Segment{
 	"perlbrew":            segmentPerlbrew,
 	"plenv":               segmentPlEnv,
 	"perms":               segmentPerms,
+	"rbenv":               segmentRbenv,
 	"root":                segmentRoot,
 	"shell-var":           segmentShellVar,
 	"shenv":               segmentShEnv,
