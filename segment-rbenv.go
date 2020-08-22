@@ -1,13 +1,14 @@
 package main
 
 import (
-	pwl "github.com/justjanne/powerline-go/powerline"
 	"errors"
 	"io/ioutil"
 	"os"
 	"os/exec"
 	"path/filepath"
 	"strings"
+
+	pwl "github.com/shubh-shah/powerline-go/powerline"
 )
 
 const rubyVersionFileSuffix = "/.ruby-version"
@@ -22,7 +23,7 @@ func runRbenvCommand(cmd string, args ...string) (string, error) {
 // check RBENV_VERSION variable
 func checkEnvForRbenvVersion() (string, error) {
 	rbenvVersion := os.Getenv("RBENV_VERSION")
-	if (len(rbenvVersion) > 0) {
+	if len(rbenvVersion) > 0 {
 		return rbenvVersion, nil
 	} else {
 		return "", errors.New("Not found in RBENV_VERSION")
@@ -33,7 +34,7 @@ func checkEnvForRbenvVersion() (string, error) {
 func checkForRubyVersionFileInTree() (string, error) {
 	var (
 		workingDirectory string
-		err error
+		err              error
 	)
 
 	workingDirectory, err = os.Getwd()
@@ -79,7 +80,7 @@ func checkForRbenvOutput() (string, error) {
 func segmentRbenv(p *powerline) []pwl.Segment {
 	var (
 		segment string
-		err error
+		err     error
 	)
 
 	segment, err = checkEnvForRbenvVersion()
